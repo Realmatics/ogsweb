@@ -40,7 +40,7 @@ namespace MVCMusicStore.Controllers
         }
 
         //
-        // GET: /Account/Login
+        // GET: /Account/Login/
         [AllowAnonymous]
         public ActionResult Login(string returnUrl)
         {
