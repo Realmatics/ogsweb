@@ -19,31 +19,28 @@
                 </button>
                 @Html.ActionLink("Application name", "Index", "Home", new { area = "" }, new { @class = "navbar-brand" })
             </div>
-            <div class="navbar-collapse collapse">
+            <div class="navbar-collapse collapse dropdown">
                 <ul class="nav navbar-nav">
                     <li>@Html.ActionLink("Home", "Index", "Home")</li>
                     <li>@Html.ActionLink("About", "About", "Home")</li>
                     <li>@Html.ActionLink("Contact", "Contact", "Home")</li>
                     <li>@Html.ActionLink("Albums", "", "Albums")</li>
-                    <li>@Html.ActionLink("Reviews", "", "Reviews")</li>
-                </ul>
+                    <li>
+                        @Html.ActionLink("Reviews", "", "Reviews")
+                        <ul class="drop">
+                            <li>@Html.ActionLink("Reviews", "", "Reviews")</li>
+                            <li>@Html.ActionLink("Reviews", "", "Reviews")</li>
+                            <li>@Html.ActionLink("Reviews", "", "Reviews")</li>
+                        </ul>
+                </li>
+                
                 @Html.Partial("_LoginPartial")
-            </div>
+</div>            
             <div class="dropdown">
-                <li id="dLabel" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">@Html.ActionLink("Home", "Index", "Home")</li>
-                <ul class="dropdown-menu" role="menu" aria-labelledby="dLabel">
-                    <li><a tabindex="-1" href="#">Action</a></li>
-                    <li><a tabindex="-1" href="#">Another action</a></li>
-                    <li><a tabindex="-1" href="#">Something else here</a></li>
-                    <li class="divider"></li>
-                    <li><a tabindex="-1" href="#">Separated link</a></li>
-                </ul>
-            </div>
-            <div class="dropdown">
-                <button id="dLabel" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                <li id="dLabel" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                     @Html.ActionLink("Home", "Index", "Home")
-                    <span class="caret">test</span>
-                </button>
+                    <span class="caret"></span>
+                </li>
                 <ul class="dropdown-menu" role="menu" aria-labelledby="dLabel">
                     <li><a tabindex="-1" href="#">Action</a></li>
                     <li><a tabindex="-1" href="#">Another action</a></li>
